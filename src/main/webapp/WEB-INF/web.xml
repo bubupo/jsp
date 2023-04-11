@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
-  <servlet>
-    <description></description>
-    <display-name>Servlet12</display-name>
-    <servlet-name>Servlet12</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet11</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Servlet12</servlet-name>
-    <url-pattern>/Servlet12</url-pattern>
-  </servlet-mapping>
-  <display-name>jsp</display-name>
+  <display-name>jsp20230327</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -19,95 +9,35 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <servlet-name>Servlet02</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet02</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet11</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet11</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet09</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet09</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet05</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet05</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet01</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet01</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet10</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet10</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet06</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet06</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet07</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet07</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet03</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet03</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet04</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet04</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Servlet08</servlet-name>
-    <servlet-class>com.study.ch17.lecture.Servlet08</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Servlet02</servlet-name>
-    <url-pattern>/lec/sample02</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet11</servlet-name>
-    <url-pattern>/lec/sample11</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet09</servlet-name>
-    <url-pattern>/lec/sample09</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet05</servlet-name>
-    <url-pattern>/lec/sample05</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet01</servlet-name>
-    <url-pattern>/lec/sample01</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet10</servlet-name>
-    <url-pattern>/lec/sample10</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet06</servlet-name>
-    <url-pattern>/lec/sample06</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet07</servlet-name>
-    <url-pattern>/lec/sample07</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet03</servlet-name>
-    <url-pattern>/lec/sample03</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet04</servlet-name>
-    <url-pattern>/lec/sample04</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Servlet08</servlet-name>
-    <url-pattern>/lec/sample08</url-pattern>
-  </servlet-mapping>
-  <listener>
-    <listener-class>com.study.listener.AppListener</listener-class>
-  </listener>
+  
+ <!-- 세션 설정 -->
+  <session-config>
+  	<session-timeout>30</session-timeout>
+  </session-config>
+  
+  <!-- 필터 설정 -->
+  
+  <filter-mapping>
+  	<filter-name>filter07</filter-name>
+  	<url-pattern>/lec/sample17</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  	<filter-name>filter08</filter-name>
+  	<url-pattern>/lec/sample17</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+  	<filter-name>filter10</filter-name>
+  	<url-pattern>/lec/sample18</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  	<filter-name>filter09</filter-name>
+  	<url-pattern>/lec/sample18</url-pattern>
+  	<url-pattern>/lec/sample19</url-pattern>
+  	<url-pattern>/lec/sub3/*</url-pattern>
+  </filter-mapping>
+  
+  
 </web-app>
